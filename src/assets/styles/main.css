@@ -1,0 +1,19 @@
+body {
+	font-family: ariel;
+	color: navy;
+	background-color: silver;
+}
+h1 {
+	text-align: center;
+	margin:0;
+}
+h2 {
+	text-align: center;
+	margin:0 5vw;
+	padding: 0 0 1vh 0;
+	border-bottom: thin solid blue;
+}
+
+#app {
+	display: block!important;
+}
