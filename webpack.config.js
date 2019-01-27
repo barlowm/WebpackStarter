@@ -1,14 +1,16 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 const path = require("path");
+
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: {
-		filename: "./src/assets/scripts/index.js"    // JS file to be pushed to build folder.
+		filename: "./src/assets/scripts/index.js"    // JS file that tells what needs to be loaded
 	},
 
 	output: {
-		filename: "main.js",   // The JS file get"s renamed
-		path: path.resolve(__dirname, "dist")
+		path: path.resolve(__dirname, "dist"),
+		filename: "all_scripts.js",   // The combined JS in the ./dist folder
 	},
 
 	module: {
@@ -17,6 +19,7 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					"style-loader",
+					MiniCssExtractPlugin.loader,
 					"css-loader"
 				]
 			}
@@ -25,8 +28,11 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: "./src/index.html",   // Here"s the HTML file used as a template
-			filename: "index.html"            // and pushed here, relative to root of the application
+			template: "./src/index.html",	// Here"s the HTML file used as a template
+			filename: "index.html"			// and saved as this, relative to root of the application
 		}),
+		new MiniCssExtractPlugin({
+			filename: "MyStyles.css",
+		})
 	]
 }
