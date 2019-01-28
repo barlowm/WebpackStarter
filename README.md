@@ -25,3 +25,13 @@ Only problem I see so far is that the screen flashes with a white background bef
 - https://blog.harveydelaney.com/fixing-fouc-in-your-webpack-build/
 - https://hackernoon.com/a-tale-of-webpack-4-and-how-to-finally-configure-it-in-the-right-way-4e94c8e7e5c1
 
+## Add_SASS Branch
+
+Adding simple SASS/SCSS functionality to the build.
+
+See:
+
+- https://webpack.js.org/plugins/mini-css-extract-plugin/
+
+for how to configure webpack.config file to compile SCSS and merge into CSS file.
+
