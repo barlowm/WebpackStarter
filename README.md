@@ -26,7 +26,7 @@ Some references:
 
 - https://webpack.js.org/guides/asset-management
 
-Only problem I see so far is that the screen flashes with a white background before the custom styles take effect since they're loaded as part of the JS file which is loaded after the entire page is 
+Only problem I see so far is that the screen flashes with a white background before the custom styles take effect since they're loaded as part of the JS file which is loaded after the entire page is rendered.
 
 ## 03 Fix FOUC (Flash of Unstyled Content)
 
