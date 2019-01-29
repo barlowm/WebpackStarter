@@ -35,3 +35,13 @@ See:
 
 for how to configure webpack.config file to compile SCSS and merge into CSS file.
 
+## Why Import and not Require
+
+It's all about reducing the size of the JS Bundle via *tree shaking*
+
+- https://insights.untapt.com/webpack-import-require-and-you-3fd7f5ea93c0
+
+So use import and make sure to *module.export* appropriately in your source modules
+
+
+

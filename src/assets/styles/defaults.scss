@@ -1,0 +1,12 @@
+/**
+ *	Custom SCSS code for this app
+ **/
+$defaultBackground: silver;
+$defaultFont: Arial, Verdana, sans-serif;
+$defaultColor: navy;
+
+body {
+	font-family: $defaultFont;
+	color: $defaultColor;
+	background-color: $defaultBackground;
+}
