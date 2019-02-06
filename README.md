@@ -9,7 +9,6 @@ Additional features are added onto the project and pushed as separate, labeled b
 Some references:
 
 - <https://github.com/jantimon/html-webpack-plugin>
-- <https://github.com/jantimon/html-webpack-plugin>
 - <https://github.com/webpack/webpack-dev-server>
 
 The index.js file loads all the required components for the app and Webpack figures out what to do with them.
