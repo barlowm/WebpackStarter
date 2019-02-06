@@ -1,11 +1,10 @@
 {
-  "name": "sample-03",
-  "version": "1.0.0",
+  "name": "webpack_starter",
+  "version": "1.5.0",
   "private": true,
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "webpack --mode development",
-    "dev": "vue-devtools",
     "start": "webpack-dev-server --mode development"
   },
   "devDependencies": {
@@ -29,5 +28,21 @@
   },
   "dependencies": {
     "vue": "^2.5.22"
-  }
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barlowm/WebpackStarter.git"
+  },
+  "keywords": [
+    "webpack",
+    "vuejs"
+  ],
+  "author": "Mike Barlow <barlowm@gmail.com> (http://mwbarlow.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barlowm/WebpackStarter/issues"
+  },
+  "homepage": "https://github.com/barlowm/WebpackStarter#readme"
 }
+
