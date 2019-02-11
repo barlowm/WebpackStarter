@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf ./dist",
-    "build": "webpack --mode development",
-    "start": "webpack-dev-server --mode development"
+    "build": "webpack --mode development --progress",
+    "start": "webpack-dev-server --mode development --progress --hot --open"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -27,9 +27,10 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "es6-promise": "^4.2.5",
     "vue": "^2.5.22"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/barlowm/WebpackStarter.git"
@@ -45,4 +46,3 @@
   },
   "homepage": "https://github.com/barlowm/WebpackStarter#readme"
 }
-
