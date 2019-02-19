@@ -7,10 +7,9 @@ const VueLoaderPlugin = require("vue-loader/lib/plugin");
 
 module.exports = {
 	mode: "development",
-	entry: [
-		"@babel/polyfill",	// polyfill for MS-IE as per https://forum.vuejs.org/t/how-to-use-vue-with-internet-explorer-11/13315
-		"./src/index.js"	// JS file that tells what needs to be loaded
-	],
+	entry: {
+		filename: "./src/index.js"    // JS file that tells what needs to be loaded
+	},
 
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -21,18 +20,18 @@ module.exports = {
 		rules: [
 			{
 				test: /\.vue$/,
-				exclude: /node_modules/,
 				loader: "vue-loader",
 			},
 			{
 				test: /\.js$/,
-				exclude: /node_modules/,
+				exclude: /(node_modules)/,
 				loader: "babel-loader",
 			},
 			{
 				test: /\.(sa|sc|c)ss$/,
 				use: [
 					MiniCssExtractPlugin.loader,
+					// "vue-style-loader",
 					"css-loader",
 					"sass-loader",
 				],
@@ -49,9 +48,5 @@ module.exports = {
 			filename: "MyStyles.css",
 		}),
 		new VueLoaderPlugin(),
-	],
-
-	devServer: {
-		disableHostCheck: true		// Use to prevent the Invalid-Host-Header message in IE-11
-	}
+	]
 }
